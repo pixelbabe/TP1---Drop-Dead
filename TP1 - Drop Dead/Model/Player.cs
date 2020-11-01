@@ -47,12 +47,12 @@ namespace TP1___Drop_Dead.Model
             observers.Add(o);
         }
 
-        public void DetachObserver(IObserver o)
+        public void detachObserver(IObserver o)
         {
             observers.Remove(o);
         }
 
-        public void NotifyObserver()
+        public void notifyObserver()
         {
             foreach(IObserver o in observers)
                 o.Update();

@@ -54,15 +54,18 @@ namespace TP1___Drop_Dead.Model
             set{ current_player_available_nb_dice = value; }
         }
 
-        public void NextPlayer(){
+        public void NextPlayer()
+        {
             Current_player++;
         }
 
-        public void ResetDice(){
+        public void ResetDice()
+        {
             this.current_player_available_nb_dice = Game.NUM_DICE_DROP_DEAD;
         }
 
-        public void TerminateRound(){
+        public void TerminateRound()
+        {
             this.finished = true;
         }
 

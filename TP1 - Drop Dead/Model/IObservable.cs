@@ -9,7 +9,7 @@ namespace TP1___Drop_Dead.Model
     interface IObservable
     {
         void AttachObserver(IObserver o);
-        void DetachObserver(IObserver o);
-        void NotifyObserver();
+        void detachObserver(IObserver o);
+        void notifyObserver();
     }
 }
