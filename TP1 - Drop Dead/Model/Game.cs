@@ -18,7 +18,8 @@ namespace TP1___Drop_Dead.Model
         private List<Round> rounds;
         
         // default c-tor
-        public Game(){
+        public Game()
+        {
             // Initialising Dice for game
             dice_set = new List<Dice>();
             for(int i = 0; i < NUM_DICE_DROP_DEAD; i++)
@@ -43,7 +44,8 @@ namespace TP1___Drop_Dead.Model
         public bool AddPlayer(Player p)
         {
             // checking for duplicate player
-            foreach (var player in players){
+            foreach (var player in players)
+            {
                 if(player.Id == p.Id)
                     return false;
             }
@@ -106,15 +108,18 @@ namespace TP1___Drop_Dead.Model
             // applying removal to round count;
             round.Current_player_available_nb_dice = round.Current_player_available_nb_dice - remove_count;
 
-            if(round.Current_player_available_nb_dice <= 0){
+            if(round.Current_player_available_nb_dice <= 0)
+            {
                 // if player has no available dice, moving to next player
                 //round.Current_player = round.Current_player + 1;
                 round.NextPlayer();
                 round.ResetDice();
 
-                if(round.Current_player == players.Count){
+                if(round.Current_player == players.Count)
+                {
                     round.TerminateRound();
-                    foreach(Player p in this.players){
+                    foreach(Player p in this.players)
+                    {
                         p.Game_score += GetCurrentRound().Calc_player_total_score(p.Id);
                     }
                 }
