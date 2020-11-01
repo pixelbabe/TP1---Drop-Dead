@@ -16,16 +16,15 @@ namespace TP1___Drop_Dead
         {
         }
 
-
         public static int GetNextID()
         {
-            if (instance == null) {
+            if (instance == null)
+            {
                 instance = new IdManager();
             }
 
             return IdManager.currentID++;
         }
-
 
     }
 }

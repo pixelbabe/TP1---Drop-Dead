@@ -9,9 +9,10 @@ namespace TP1___Drop_Dead
 {
     class Dice
     {
+        private static Random r = new Random();
+
         private int nb_sides;
         private int current;
-        private Random r = new Random();
 
         public int Nb_sides
         {
@@ -31,8 +32,8 @@ namespace TP1___Drop_Dead
         }
 
         public int Roll_dice()
-        {
-            current = r.Next(1, nb_sides + 1);
+        {   
+            current = Dice.r.Next() % nb_sides+1;
             return current;
         }
         
