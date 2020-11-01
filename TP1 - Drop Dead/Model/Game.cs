@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace TP1___Drop_Dead
+namespace TP1___Drop_Dead.Model
+
 {   
     class Game
     {
@@ -83,7 +84,7 @@ namespace TP1___Drop_Dead
             }
             Console.Write(" ]\n");
             
-            Parse_dice_set(rolled, rounds[rounds.Count-1]);
+            Parse_dice_set(rolled, GetCurrentRound());
         } 
 
         // Game logic goes here !
@@ -107,10 +108,16 @@ namespace TP1___Drop_Dead
 
             if(round.Current_player_available_nb_dice <= 0){
                 // if player has no available dice, moving to next player
-                round.Current_player = round.Current_player + 1;
-                round.Current_player_available_nb_dice = NUM_DICE_DROP_DEAD;
-                if(round.Current_player == players.Count)
-                    round.Finished = true;
+                //round.Current_player = round.Current_player + 1;
+                round.NextPlayer();
+                round.ResetDice();
+
+                if(round.Current_player == players.Count){
+                    round.TerminateRound();
+                    foreach(Player p in this.players){
+                        p.Game_score += GetCurrentRound().Calc_player_total_score(p.Id);
+                    }
+                }
             }
             
         }

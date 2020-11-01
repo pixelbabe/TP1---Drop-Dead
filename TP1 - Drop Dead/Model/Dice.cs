@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP1___Drop_Dead
+namespace TP1___Drop_Dead.Model
+
 {
     class Dice
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP1___Drop_Dead
+namespace TP1___Drop_Dead.Model
 {
     class Round
     {
@@ -52,6 +52,18 @@ namespace TP1___Drop_Dead
         {
             get { return current_player_available_nb_dice; }
             set{ current_player_available_nb_dice = value; }
+        }
+
+        public void NextPlayer(){
+            Current_player++;
+        }
+
+        public void ResetDice(){
+            this.current_player_available_nb_dice = Game.NUM_DICE_DROP_DEAD;
+        }
+
+        public void TerminateRound(){
+            this.finished = true;
         }
 
         public void Add_player_rolls(int player_id, int[] score)

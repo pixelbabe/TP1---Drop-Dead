@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP1___Drop_Dead
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
