@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TP1___Drop_Dead.Model
 
 {
-    class Dice
+    public class Dice
     {
         private static Random r = new Random();
 

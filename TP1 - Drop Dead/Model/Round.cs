@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP1___Drop_Dead.Model
 {
-    class Round
+    public class Round
     {
         private static int ROUND_COUNT = 0;
 

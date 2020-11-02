@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TP1___Drop_Dead.Model
 
 {   
-    class Game
+    public class Game
     {
         public static int NUM_DICE_DROP_DEAD = 5;
         public static int NUM_DICE_FACE_DROP_DEAD = 6;
