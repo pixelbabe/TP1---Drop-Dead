@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TP1___Drop_Dead.Model
 {
-    class Player : IPlayer, IObservable
+    public class Player : IPlayer/*, IObservable*/
     {
         private string name;
         private int id;
         private int game_score;
-        private List<IObserver> observers;
+        //private List<IObserver> observers;
 
         public string Name
         {
@@ -42,7 +42,7 @@ namespace TP1___Drop_Dead.Model
             return $"Player: {Name}, Score : {Game_score}";
         }
 
-        public void AttachObserver(IObserver o)
+       /* public void AttachObserver(IObserver o)
         {
             observers.Add(o);
         }
@@ -56,6 +56,6 @@ namespace TP1___Drop_Dead.Model
         {
             foreach(IObserver o in observers)
                 o.Update();
-        }
+        }*/
     }
 }

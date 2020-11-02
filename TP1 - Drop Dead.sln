@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1 - Drop Dead", "TP1 - Drop Dead\TP1 - Drop Dead.csproj", "{BC02F43D-68B6-40C4-A24F-6916A0AE04EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDead.Tests", "DropDead.Tests\DropDead.Tests.csproj", "{4249CE90-891C-4704-A78D-B41291768300}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BC02F43D-68B6-40C4-A24F-6916A0AE04EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC02F43D-68B6-40C4-A24F-6916A0AE04EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC02F43D-68B6-40C4-A24F-6916A0AE04EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4249CE90-891C-4704-A78D-B41291768300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4249CE90-891C-4704-A78D-B41291768300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4249CE90-891C-4704-A78D-B41291768300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4249CE90-891C-4704-A78D-B41291768300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
